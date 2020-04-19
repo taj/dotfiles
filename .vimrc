@@ -19,10 +19,15 @@ Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
+syntax enable
 set linebreak
 set number
+set showcmd
 set hidden
 set showmatch
+
+set incsearch
+set hlsearch
 
 set noswapfile
 set nobackup
@@ -30,6 +35,8 @@ set autoread
 set hlsearch
 
 set expandtab
+set tabstop=4
+set softtabstop=4
 
 set background=dark
 colorscheme onedark
@@ -37,6 +44,10 @@ set termguicolors
 
 " fzf
 nmap <C-p> :Files<cr>
+
+"Wild mode
+set wildmenu
+set wildmode=list:longest,full
 
 "Highlight current line number
 hi clear CursorLine
