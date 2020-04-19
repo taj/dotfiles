@@ -10,4 +10,6 @@
 	last = log -1 HEAD
 [core]
 	excludesfile = /Users/tajinderchumber/.gitignore
+[diff]
+	tool = vimdiff
 
