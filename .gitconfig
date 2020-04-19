@@ -1,0 +1,13 @@
+[user]
+	name = Tajinder Chumber
+	email = me@taj.dev
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+[core]
+	excludesfile = /Users/tajinderchumber/.gitignore
+
