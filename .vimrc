@@ -11,6 +11,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'preservim/nerdtree'
 
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -20,6 +21,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'slashmili/alchemist.vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'css', 'scss', 'json', 'graphql', 'markdown', 'yaml', 'html'] }
 
 call plug#end()
 
@@ -30,6 +34,8 @@ set number
 set showcmd
 set hidden
 set showmatch
+set listchars=tab:>-,space:.
+set list
 
 set incsearch
 set hlsearch
@@ -47,8 +53,9 @@ set background=dark
 colorscheme onedark
 set termguicolors
 
-" fzf
+"Fzf
 nmap <C-p> :Files<cr>
+let $FZF_DEFAULT_COMMAND = 'ack -g ""'
 
 "Wild mode
 set wildmenu
@@ -70,6 +77,8 @@ endif
 let g:mix_format_on_save = 1
 let g:mix_format_silent_errors = 1
 
-:imap jj <Esc>
-:imap jk <Esc>
+imap jj <Esc>
+imap jk <Esc>
+map <C-n> :NERDTreeToggle<CR>
+map <C-g> :Gdiffsplit<CR>
 
