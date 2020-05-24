@@ -16,6 +16,7 @@ Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
+Plug 'mattn/emmet-vim'
 Plug 'ElmCast/elm-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'slashmili/alchemist.vim'
@@ -34,7 +35,6 @@ set number
 set showcmd
 set hidden
 set showmatch
-set listchars=tab:>-,space:.
 set list
 
 set incsearch
@@ -77,8 +77,10 @@ endif
 let g:mix_format_on_save = 1
 let g:mix_format_silent_errors = 1
 
+"Format elm code on save
+let g:elm_format_autosave = 1
+
 imap jj <Esc>
 imap jk <Esc>
 map <C-n> :NERDTreeToggle<CR>
 map <C-g> :Gdiffsplit<CR>
-
