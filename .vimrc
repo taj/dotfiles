@@ -10,6 +10,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 
@@ -84,3 +85,4 @@ imap jj <Esc>
 imap jk <Esc>
 map <C-n> :NERDTreeToggle<CR>
 map <C-g> :Gdiffsplit<CR>
+map <CR> :noh<CR>
