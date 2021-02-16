@@ -11,6 +11,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-eunuch'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 
@@ -47,8 +48,8 @@ set autoread
 set hlsearch
 
 set expandtab
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
 
 set background=dark
 colorscheme onedark
@@ -86,3 +87,5 @@ imap jk <Esc>
 map <C-n> :NERDTreeToggle<CR>
 map <C-g> :Gdiffsplit<CR>
 map <CR> :noh<CR>
+nmap <Space> :Rg
+
