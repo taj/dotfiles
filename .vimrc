@@ -26,7 +26,11 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'css', 'scss', 'json', 'graphql', 'markdown', 'yaml', 'html'] }
+  \ 'for': ['javascript', 'json', 'graphql', 'markdown', 'yaml', 'html'] }
+
+let g:prettier#autoformat = 0
+let g:prettier#config#single_quote = 'true'
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 call plug#end()
 
