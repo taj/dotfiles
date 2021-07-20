@@ -10,6 +10,9 @@
 	last = log -1 HEAD
 [core]
 	excludesfile = /Users/tajinderchumber/.gitignore
-[diff]
-	tool = vimdiff
 
+[http]
+	lowSpeedLimit = 1000
+	lowSpeedTime = 600
+[init]
+	defaultBranch = main
