@@ -55,9 +55,14 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 
-set background=dark
-colorscheme onedark
+"Theme
 set termguicolors
+let g:onedark_termcolors=256
+set background=dark
+let g:onedark_color_overrides = {
+\ "background": {"gui": "#000000", "cterm": "NONE", "cterm16": "NONE" },
+\}
+colorscheme onedark
 
 "Fzf
 nmap <C-p> :Files<cr>
