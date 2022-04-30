@@ -15,8 +15,8 @@ Plug 'tpope/vim-eunuch'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'mattn/emmet-vim'
 Plug 'ElmCast/elm-vim'
@@ -64,9 +64,6 @@ let g:onedark_color_overrides = {
 \}
 colorscheme onedark
 
-"Fzf
-nmap <C-p> :Files<cr>
-let $FZF_DEFAULT_COMMAND = 'ack -g ""'
 
 "Wild mode
 set wildmenu
@@ -95,6 +92,7 @@ imap jj <Esc>
 imap jk <Esc>
 map <C-n> :NERDTreeToggle<CR>
 map <C-g> :Gdiffsplit<CR>
-map <CR> :noh<CR>
-nmap <Space> :Rg
+
+nmap <C-p> <cmd>Telescope find_files<cr>
+nmap <Space> <cmd>Telescope live_grep<cr>
 
